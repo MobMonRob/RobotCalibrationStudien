@@ -2,6 +2,8 @@
 
 # Python 2/3 compatibility imports
 from __future__ import print_function
+from asyncio.windows_events import NULL
+from ctypes import create_unicode_buffer
 
 import sys
 import copy
@@ -95,50 +97,59 @@ class Calibration(object):
         move_group = self.move_group
         move_group.execute(plan, wait=True)
 
+    def MoveToSphere(self, args, vector, offset, stepWidth, sensorGetter): #vector = zu fahrende richtung
+        currentX = args[1] - offset * vector[0]
+        currentY = args[2] - offset * vector[1]
+        currentZ = args[3] - offset * vector[2]
+        startPosPath = self.plan_cartesian_path(currentX, currentY, currentZ, 0.0, 0.0, 0.0, 0.0)
+        self.execute_plan(startPosPath)
+
+        stopX = currentX + 2 * offset * vector[0]
+        stopY = currentX + 2 * offset * vector[1]
+        stopZ = currentX + 2 * offset * vector[2]
+
+        while((not sensorGetter.getSensorState) or self.MaximumReached(currentX, stopX, vector[0]) or self.MaximumReached(currentY, stopY, vector[1]) or self.MaximumReached(currentZ, stopZ, vector[2])):
+            currentX += vector[0] * stepWidth
+            currentY += vector[1] * stepWidth
+            currentZ += vector[2] * stepWidth
+            plan = self.plan_cartesian_path(currentX, currentY, currentZ, 0.0, 0.0, 0.0, 0.0)
+            self.execute_plan(plan)
+
+        result = self.move_group.get_current_pose().pose
+        self.execute_plan(startPosPath)
+        self.execute_plan(NULL) #TODO HomePos
+        return result
+    
+    def MaximumReached(current, stop, vector):
+        if(vector > 0):
+            return current >= stop
+        else: return current <= stop
 
 def main():
     try:
         args = sys.argv
         calibration = Calibration()
-        sphereCoordinates = [float(args[1]), float(args[2]), float(args[3]), float(args[4])]
+        sensorGetter = SensorGetter()
+        result = []
+
         sensorAttachementLength = 0.16
         safetyOffset = 0.05
-        offset = sphereCoordinates[0] + sensorAttachementLength + safetyOffset
-        pathForward = calibration.plan_cartesian_path(sphereCoordinates[1] - offset, sphereCoordinates[2], sphereCoordinates[3], 0.0, 0.0, 0.0, 0.0)
-        pathLeft = calibration.plan_cartesian_path(sphereCoordinates[1], sphereCoordinates[2] + offset, sphereCoordinates[3], 0.0, 0.0, 0.0, 0.0)
-        pathRight = calibration.plan_cartesian_path(sphereCoordinates[1], sphereCoordinates[2] - offset, sphereCoordinates[3], 0.0, 0.0, 0.0, 0.0)
-        pathTop = calibration.plan_cartesian_path(sphereCoordinates[1], sphereCoordinates[2], sphereCoordinates[3] + offset, 0.0, 0.0, 0.0, 0.0)
+        offset = sensorAttachementLength + safetyOffset
         stepWidth = 0.0005
 
-        sensorGetter = SensorGetter()
+        result.append(calibration.MoveToSphere(args, [1, 0, 0], offset, stepWidth, sensorGetter))
+        result.append(calibration.MoveToSphere(args, [0, 1, 0], offset, stepWidth, sensorGetter))
+        result.append(calibration.MoveToSphere(args, [0, -1, 0], offset, stepWidth, sensorGetter))
+        result.append(calibration.MoveToSphere(args, [0, 0, -1], offset, stepWidth, sensorGetter))
 
-        calibration.execute_plan(pathForward)
-        while(not sensorGetter.getSensorState):
-            pose = calibration.move_group.get_current_pose().pose
-            plan = calibration.plan_cartesian_path(pose.position.x + stepWidth, pose.position.y, pose.position.z, pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w)
-            calibration.execute_plan(plan)
-        calibration.execute_plan(pathForward)
-
-        calibration.execute_plan(pathLeft)
-        while(not sensorGetter.getSensorState):
-            pose = calibration.move_group.get_current_pose().pose
-            plan = calibration.plan_cartesian_path(pose.position.x, pose.position.y - stepWidth, pose.position.z, pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w)
-            calibration.execute_plan(plan)
-        calibration.execute_plan(pathLeft)
-
-        calibration.execute_plan(pathTop)
-        while(not sensorGetter.getSensorState):
-            pose = calibration.move_group.get_current_pose().pose
-            plan = calibration.plan_cartesian_path(pose.position.x, pose.position.y, pose.position.z - stepWidth, pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w)
-            calibration.execute_plan(plan)
-        calibration.execute_plan(pathTop)
-
-        calibration.execute_plan(pathRight)
-        while(not sensorGetter.getSensorState):
-            pose = calibration.move_group.get_current_pose().pose
-            plan = calibration.plan_cartesian_path(pose.position.x, pose.position.y + stepWidth, pose.position.z, pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w)
-            calibration.execute_plan(plan)
-        calibration.execute_plan(pathRight)
+        print("Pose1:\n")
+        print(result[0] + "\n")
+        print("Pose2:\n")
+        print(result[1] + "\n")
+        print("Pose3:\n")
+        print(result[2] + "\n")
+        print("Pose4:\n")
+        print(result[3] + "\n")
 
     except rospy.ROSInterruptException:
         return
