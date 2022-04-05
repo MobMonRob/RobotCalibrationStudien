@@ -15,6 +15,8 @@ if cv2.countNonZero(gray) > ((w*h)//2):
     gray = cv2.bitwise_not(gray)
 
 blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+
+cv2.imshow("Blured", blurred)
 thresh = cv2.threshold(blurred, 60, 255, cv2.THRESH_BINARY)[1]
 
 # find contours in the thresholded image
