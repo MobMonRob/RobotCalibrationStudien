@@ -28,7 +28,7 @@ def GetCenterPoint(img, blured):
             points.append(((x1, y1), (x2, y2)))
             cv2.line(line_image, (x1, y1), (x2, y2), (255, 0, 0), 5)
 
-    lines_edges = cv2.addWeighted(img, 0.8, line_image, 1, 0)
+    img = cv2.addWeighted(img, 0.8, line_image, 1, 0)
 
     intersections = bot.isect_segments(points)
 
@@ -42,31 +42,52 @@ def GetCenterPoint(img, blured):
 
     for i in range(-2,3):
         for j in range(-2,3):      
-            lines_edges[y + i, x + j] = [0, 255, 0]            
+            img[y + i, x + j] = [0, 255, 0]            
     
-    return x, y, lines_edges
+    angle = CalculateAngle(points)
 
+    return x, y, img, angle
+
+def CalculateAngle(points):    
+    angles= []
+    sumAngles = 0
+
+    for point in points:
+        first, second = point
+        angles.append(np.rad2deg(np.arctan2(first[1] - second[1], first[0] - second[0])))
+
+    for angle in angles:
+        if angle == 90 or angle == 180:
+            continue
+        if angle > 90 and angle < 180:
+            sumAngles += 180 - angle
+            continue
+        if angle > -180 and angle < -90:
+            sumAngles += -(90 + angle)
+            continue
+
+    return sumAngles / len(angles)
 
 def GetBluredImage(img):
     kernel_size = 5
-    gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-    return cv2.GaussianBlur(gray,(kernel_size, kernel_size),0)
+    return cv2.GaussianBlur(img,(kernel_size, kernel_size),0)
+
+def GetGrayImage(img):
+    return cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
 if __name__ == "__main__":
 
-    path = "Test\Test6.png"
+    path = "D:\\repos\RobotCalibrationStudien\laser\Test\Test8.png"
 
     img = cv2.imread(path)
     h, w, c = img.shape
 
-    
+    blured = GetBluredImage(GetGrayImage(img))
+    #cv2.imshow("", blured)
+    x, y, lines_edges, angle = GetCenterPoint(img, blured)
 
-    cv2.imshow("Blured", blur_gray)
-
-    x, y, lines_edges = GetCenterPoint(img, blur_gray)
-
-    print (str(x))
-    print (str(y))
+    #print (str(x))
+    #print (str(y))
     cv2.imshow("Result", lines_edges)
 
     if cv2.waitKey(0) == 27: 
