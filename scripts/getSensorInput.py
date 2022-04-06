@@ -19,32 +19,28 @@ class SensorGetter:
 
     def __init__(self, service = '/ur_hardware_interface/io_states'):
         
-        print('Getting subscriber')
+        #print('Getting subscriber')
         #rospy.wait_for_service(service)
-
-        self.subscriber = rospy.Subscriber(service, String, self.callback)
+        #print("\n\n\ninit\n\n\n")
+        #self.subscriber = rospy.Subscriber(service, IOStates, self.callback)
         self.buttonState = False
+        rospy.Subscriber(service, IOStates, self.callback)
+        #rospy.spin()
 
 
-    def callback(data):
+    def callback(self, data):
         state = data.digital_in_states[0].state
-        rospy.loginfo(state)
-        buttonState = state
+        #rospy.loginfo(state)
+        self.buttonState = state
 
-    def listener(self):
-        rospy.init_node('listener', anonymous=True)
-        rospy.Subscriber("/ur_hardware_interface/io_states", IOStates, self.callback)
-        rospy.spin()
+    #def listener(self):
 
     def getSensorState(self):
-        rospy.init_node('listener', anonymous=True)
-        rospy.Subscriber("/ur_hardware_interface/io_states", IOStates, self.callback)
-        time.sleep(0.005)
+        #time.sleep(0.005)
         return self.buttonState
 
-if __name__ == "__main__":
-    client = SensorGetter()
+#if __name__ == "__main__":
     #message = rospy.wait_for_message('/ur_hardware_interface/io_states', IOStates)
     #print(message)
-    client.listener()
-
+    #for i in range(0, 10000):
+        #print(client.getSensorState())
