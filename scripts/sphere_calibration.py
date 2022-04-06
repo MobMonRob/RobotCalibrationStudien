@@ -6,6 +6,7 @@ from ctypes import create_unicode_buffer
 
 import sys
 import copy
+from telnetlib import SE
 import rospy
 import moveit_commander
 import moveit_msgs.msg
@@ -14,7 +15,7 @@ from getSensorInput import SensorGetter
 from tf.transformations import euler_from_quaternion, quaternion_from_euler
 
 try:
-    from math import pi, tau, dist, fabs, cos
+    from math import pi, tau, dist, fabs, cos, sqrt
 except:  # For Python 2 compatibility
     from math import pi, fabs, cos, sqrt
 
@@ -165,10 +166,7 @@ class Calibration(object):
             return current <= stop
         else: return False
 
-def main():
-    try:
-        args = sys.argv
-        calibration = Calibration()
+    def HorizontalSphereApproach(self, args):
         result = []
 
         sensorAttachementLength = 0.16
@@ -178,21 +176,22 @@ def main():
 
         jointMover = JointBasedMove()
         #forward
-        jointMover.go_to_joint_states(calibration.getRadsFromDegrees([-180, -90, -140, -130, 270, 0]), calibration.move_group)
-        result.append(calibration.MoveToSphere(args, [1, 0, 0], offset, stepWidth))
-        jointMover.go_to_joint_states(calibration.getRadsFromDegrees([-180, -90, -140, -130, 270, 0]), calibration.move_group)
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-180, -90, -140, -130, 270, 0]), self.move_group)
+        result.append(self.MoveToSphere(args, [1, 0, 0], offset, stepWidth))
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-180, -90, -140, -130, 270, 0]), self.move_group)
         #right
-        jointMover.go_to_joint_states(calibration.getRadsFromDegrees([-210, -130, -90, -140, 150, 0]), calibration.move_group)
-        result.append(calibration.MoveToSphere(args, [0, 1, 0], offset, stepWidth))
-        jointMover.go_to_joint_states(calibration.getRadsFromDegrees([-210, -130, -90, -140, 150, 0]), calibration.move_group)
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-210, -130, -90, -140, 150, 0]), self.move_group)
+        result.append(self.MoveToSphere(args, [0, 1, 0], offset, stepWidth))
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-210, -130, -90, -140, 150, 0]), self.move_group)
+
         #left
-        jointMover.go_to_joint_states(calibration.getRadsFromDegrees([-125, -130, -90, -140, 55, 0]), calibration.move_group)
-        result.append(calibration.MoveToSphere(args, [0, -1, 0], offset, stepWidth))
-        jointMover.go_to_joint_states(calibration.getRadsFromDegrees([-125, -130, -90, -140, 55, 0]), calibration.move_group)
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-125, -130, -90, -140, 55, 0]), self.move_group)
+        result.append(self.MoveToSphere(args, [0, -1, 0], offset, stepWidth))
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-125, -130, -90, -140, 55, 0]), self.move_group)
         #top
-        jointMover.go_to_joint_states(calibration.getRadsFromDegrees([-180, -90, -90, -90, 90, 0]), calibration.move_group)
-        result.append(calibration.MoveToSphere(args, [0, 0, -1], offset, stepWidth))
-        jointMover.go_to_joint_states(calibration.getRadsFromDegrees([-180, -90, -90, -90, 90, 0]), calibration.move_group)
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-180, -90, -90, -90, 90, 0]), self.move_group)
+        result.append(self.MoveToSphere(args, [0, 0, -1], offset, stepWidth))
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-180, -90, -90, -90, 90, 0]), self.move_group)
 
         print("Pose1:\n")
         print(result[0], "\n")
@@ -202,6 +201,44 @@ def main():
         print(result[2], "\n")
         print("Pose4:\n")
         print(result[3], "\n")
+        return result
+
+
+    def DiagonalSphereApproach(self, args):
+        result = []
+        sensorAttachementLength = 0.16
+        safetyOffset = 0.05
+        offset = sensorAttachementLength + safetyOffset
+        stepWidth = 0.0005
+
+        inverseSqrtOfTwo = 1/sqrt(2)
+
+        #TODO CHECK QUATERNION CALCULATION
+
+        jointMover = JointBasedMove()
+        #top
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-180, -90, -90, -90, 90, 0]), self.move_group)
+        result.append(self.MoveToSphere(args, [0, 0, -1], offset, stepWidth))
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-180, -90, -90, -90, 90, 0]), self.move_group)
+        #right diagonal
+        result.append(self.MoveToSphere(args, [0, inverseSqrtOfTwo, -inverseSqrtOfTwo], offset, stepWidth))
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-180, -90, -90, -90, 90, 0]), self.move_group)
+        #left diagonal
+        result.append(self.MoveToSphere(args, [0, -inverseSqrtOfTwo, -inverseSqrtOfTwo], offset, stepWidth))
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-180, -90, -90, -90, 90, 0]), self.move_group)
+        #front diagonal
+        result.append(self.MoveToSphere(args, [inverseSqrtOfTwo, 0, -inverseSqrtOfTwo], offset, stepWidth))
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-180, -90, -90, -90, 90, 0]), self.move_group)
+        #back diagonal
+        result.append(self.MoveToSphere(args, [-inverseSqrtOfTwo, 0, -inverseSqrtOfTwo], offset, stepWidth))
+        jointMover.go_to_joint_states(self.getRadsFromDegrees([-180, -90, -90, -90, 90, 0]), self.move_group)
+        return result
+
+def main():
+    try:
+        args = sys.argv
+        calibration = Calibration()
+        calibration.DiagonalSphereApproach(args)
 
     except rospy.ROSInterruptException:
         return
