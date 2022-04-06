@@ -75,9 +75,7 @@ class MoveGroupPythonInterfaceTutorial(object):
         waypoints = []
 
         wpose = move_group.get_current_pose().pose
-        wpose.position.x = scale * float(args[1])
-        wpose.position.y = scale * float(args[2])
-        wpose.position.z = scale * float(args[3])
+        wpose.orientation.w = scale * float(args[1])
         waypoints.append(copy.deepcopy(wpose))
 
         (plan, fraction) = move_group.compute_cartesian_path(
