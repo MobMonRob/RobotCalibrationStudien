@@ -1,4 +1,5 @@
 import cv2
+from BaslerCamera import Camera
 
 if __name__ == "__main__":
     print("Running")
@@ -11,10 +12,14 @@ if __name__ == "__main__":
     
     path = "Test\Test11.png"
 
+    camera = Camera()
+
     while True:
         #ret, frame = cap.read()
 
-        frame = cv2.imread(path)
+        #frame = cv2.imread(path)
+
+        frame = camera.GetImage()
 
         if mirror: 
             frame = cv2.flip(frame, 1)
