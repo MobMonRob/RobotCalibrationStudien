@@ -3,7 +3,7 @@ import imutils
 import cv2
 import numpy as np
 
-def GetGrayImage(image):
+def __GetGrayImage(image):
     h, w, c = image.shape
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -16,8 +16,10 @@ def GetGrayImage(image):
 def GetCenterOfCountours(image):
     h, w, c = image.shape
 
+    gray = __GetGrayImage(image)
+
     # find contours in the thresholded image
-    thresh = cv2.threshold(image, 60, 255, cv2.THRESH_BINARY)[1]
+    thresh = cv2.threshold(gray, 60, 255, cv2.THRESH_BINARY)[1]
     cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     cnts = imutils.grab_contours(cnts)
 
@@ -38,8 +40,9 @@ def GetCenterOfCountours(image):
             cv2.drawContours(image, [c], -1, (0, 255, 255), 1)
             cv2.circle(image, (cX, cY), 1, (255, 255, 255), -1)
 
-    if len(centers) > 5:
-        print ("Mehr als 4 Marker erkannt. Kalibrierung kann nicht durchgeführt werden.")
+    if len(centers) != 5:
+        print ("More than 4 markes detected. Calibration is not possible.")
+        return
     else:
         #check wich point is the left, the right, the top and he bottom one
         for center in centers:
@@ -55,8 +58,8 @@ def GetCenterOfCountours(image):
             if center[0] > w * 3/4 and center[1] > h * 3/4:
                 rightBottom = center                
                 
-        pts = np.array([leftTop, leftBottom, rightBottom, rightTop], np.int32)    
-        ptsReshaped = pts.reshape((-1, 1, 2))
-        image = cv2.polylines(image, [ptsReshaped], True, (255,0,0), 1)
+        pts = np.float32([leftTop, rightTop, leftBottom, rightBottom ])    
+        ptsReshaped = np.int32([[[leftTop],[rightTop],[rightBottom],[leftBottom]]])
+        image = cv2.polylines(image, ptsReshaped, True, (255,0,0), 1)
 
     return pts, image
