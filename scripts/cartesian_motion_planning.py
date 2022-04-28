@@ -2,6 +2,7 @@
 
 # Python 2/3 compatibility imports
 from __future__ import print_function
+from tf.transformations import quaternion_from_euler, euler_from_quaternion
 
 import sys
 import copy
@@ -75,7 +76,9 @@ class MoveGroupPythonInterfaceTutorial(object):
         waypoints = []
 
         wpose = move_group.get_current_pose().pose
-        wpose.orientation.w = scale * float(args[1])
+
+        print(wpose)
+        quaternion = quaternion_from_euler()
         waypoints.append(copy.deepcopy(wpose))
 
         (plan, fraction) = move_group.compute_cartesian_path(
@@ -92,8 +95,10 @@ def main():
     try:
         args = sys.argv
         tutorial = MoveGroupPythonInterfaceTutorial()
+        
         cartesian_plan, fraction = tutorial.plan_cartesian_path(args)
         tutorial.execute_plan(cartesian_plan)
+        print(tutorial.move_group.get_current_pose().pose)
     except rospy.ROSInterruptException:
         return
     except KeyboardInterrupt:
