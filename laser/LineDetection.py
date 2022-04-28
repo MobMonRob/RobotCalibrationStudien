@@ -1,10 +1,12 @@
 from telnetlib import NOP
+from urllib.parse import uses_params
 import cv2
 import numpy as np
 import poly_point_isect as bot
 
-def GetCenterPoint(img, blured):
+def GetCenterPoint(img):
 
+    blured = __GetBluredImage(img)
     points = []
     sumX, sumY = 0, 0
 
@@ -44,51 +46,37 @@ def GetCenterPoint(img, blured):
         for j in range(-2,3):      
             img[y + i, x + j] = [0, 255, 0]            
     
-    angle = CalculateAngle(points)
+    angle = __CalculateAngle(points)
 
     return x, y, img, angle
 
-def CalculateAngle(points):    
+def __CalculateAngle(points):    
     angles= []
     sumAngles = 0
+    usedAngels = 0 
 
     for point in points:
         first, second = point
         angles.append(np.rad2deg(np.arctan2(first[1] - second[1], first[0] - second[0])))
 
     for angle in angles:
-        if angle == 90 or angle == 180:
-            continue
         if angle > 90 and angle < 180:
             sumAngles += 180 - angle
+            usedAngels += 1
             continue
         if angle > -180 and angle < -90:
             sumAngles += -(90 + angle)
+            usedAngels += 1
             continue
 
-    return sumAngles / len(angles)
+    if usedAngels == 0 and sumAngles == 0: 
+        return 0
+    return sumAngles / usedAngels
 
-def GetBluredImage(img):
+def __GetBluredImage(img):
+    img = __GetGrayImage(img)
     kernel_size = 5
     return cv2.GaussianBlur(img,(kernel_size, kernel_size),0)
 
-def GetGrayImage(img):
+def __GetGrayImage(img):
     return cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-
-if __name__ == "__main__":
-
-    path = "D:\\repos\RobotCalibrationStudien\laser\Test\Test8.png"
-
-    img = cv2.imread(path)
-    h, w, c = img.shape
-
-    blured = GetBluredImage(GetGrayImage(img))
-    #cv2.imshow("", blured)
-    x, y, lines_edges, angle = GetCenterPoint(img, blured)
-
-    #print (str(x))
-    #print (str(y))
-    cv2.imshow("Result", lines_edges)
-
-    if cv2.waitKey(0) == 27: 
-        cv2.destroyAllWindows()
