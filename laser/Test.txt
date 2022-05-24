@@ -1,0 +1,1139 @@
+0°
+Angels of First Image: 0,999121486730227, 0,9865982562059159
+Angels of Second Image: 1,0024563445007857, 0,9793672771589712
+Average Angle First: 0,9928598714680714
+Error First Image: 0,012523230524311146
+Average Angle Second: 0,9909118108298784
+Error Second Image: 0,023089067341814484
+Measuered Angle: -0,0019480606381929721
+
+5°
+Angels of First Image: 1,035137715353784, 0,9674984922560933
+Angels of Second Image: 5,979699042442943, 5,293860979836035
+Average Angle First: 1,0013181038049386
+Error First Image: 0,06763922309769066
+Average Angle Second: 5,636780011139489
+Error Second Image: 0,6858380626069076
+Measuered Angle: 4,635461907334551
+
+10°
+Angels of First Image: 0,9825837718027021, 0,9879790091467058
+Angels of Second Image: 10,412131711604584, 10,363358373394798
+Average Angle First: 0,985281390474704
+Error First Image: -0,005395237344003712
+Average Angle Second: 10,387745042499692
+Error Second Image: 0,04877333820978613
+Measuered Angle: 9,402463652024988
+
+15°
+Angels of First Image: 0,938130158048466, 1,060973479599653
+Angels of Second Image: 15,435572411983225, 16,02571449912799
+Average Angle First: 0,9995518188240595
+Error First Image: -0,12284332155118705
+Average Angle Second: 15,730643455555608
+Error Second Image: -0,5901420871447645
+Measuered Angle: 14,731091636731549
+
+20°
+Angels of First Image: 0,9576970719745551, 0,9658531218126901
+Angels of Second Image: 20,349186129888434, 20,38798562972462
+Average Angle First: 0,9617750968936226
+Error First Image: -0,008156049838135004
+Average Angle Second: 20,368585879806528
+Error Second Image: -0,03879949983618758
+Measuered Angle: 19,406810782912906
+
+25°
+Angels of First Image: 0,9046875042043823, 0,9263482923023645
+Angels of Second Image: 25,3629086675767, 25,363287475156753
+Average Angle First: 0,9155178982533734
+Error First Image: -0,02166078809798222
+Average Angle Second: 25,36309807136673
+Error Second Image: -0,000378807580052154
+Measuered Angle: 24,447580173113355
+
+30°
+Angels of First Image: 0,949331625830998, 0,9919764671814448
+Angels of Second Image: 30,9796960443664, 30,323144645167122
+Average Angle First: 0,9706540465062214
+Error First Image: -0,04264484135044688
+Average Angle Second: 30,651420344766763
+Error Second Image: 0,6565513991992766
+Measuered Angle: 29,68076629826054
+
+35°
+Angels of First Image: 1,0149693547830607, 0
+Angels of Second Image: 35,988790254800044, 35,98211663336339
+Average Angle First: 0,5074846773915304
+Error First Image: 1,0149693547830607
+Average Angle Second: 35,98545344408171
+Error Second Image: 0,006673621436654287
+Measuered Angle: 35,47796876669018
+
+40°
+
+
+
+80°
+Angels of First Image: 0,9743945135585221, 0,9280365850163719
+Angels of Second Image: 80,6712965423257, 80,67451158401292
+Average Angle First: 0,951215549287447
+Error First: 0,04635792854215026
+Average Angle Second: 80,67290406316931
+Error Second: -0,0032150416872127607
+Measuered Angle: 79,72168851388187
+
+
+Test 2
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 0
+Angels of First Image: 0,7538483330707777, 0,7884242624401168
+Angels of Second Image: 5,081291931986194, 5,1063781640506525
+Average Angle First: 0,7711362977554472
+Error First Image: -0,034575929369339065
+Average Angle Second: 5,093835048018423
+Error Second Image: -0,025086232064458258
+Measuered Angle: 4,322698750262976
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 5
+Angels of First Image: 0,81895801264276, 36,90293914506953
+Angels of Second Image: 13,884792075428278, 10,014790237496868
+Average Angle First: 18,860948578856146
+Error First Image: -36,08398113242677
+Average Angle Second: 11,949791156462574
+Error Second Image: 3,87000183793141
+Measuered Angle: -6,911157422393572
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 10
+Angels of First Image: 0,7944439082034194, 0,8857609441636157
+Angels of Second Image: 15,022981535746062, 15,031760798933284
+Average Angle First: 0,8401024261835175
+Error First Image: -0,09131703596019636
+Average Angle Second: 15,027371167339673
+Error Second Image: -0,008779263187221886
+Measuered Angle: 14,187268741156156
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 15
+Angels of First Image: 0,7814029187771894, 30,24149306753489
+Angels of Second Image: 22,079209762044773, 22,01957640612873
+Average Angle First: 15,51144799315604
+Error First Image: -29,4600901487577
+Average Angle Second: 22,049393084086752
+Error Second Image: 0,05963335591604135
+Measuered Angle: 6,537945090930712
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 20
+Angels of First Image: 0,935783504447329, 0
+Angels of Second Image: 25,011801502713425, 25,003826702103623
+Average Angle First: 0,4678917522236645
+Error First Image: 0,935783504447329
+Average Angle Second: 25,007814102408524
+Error Second Image: 0,007974800609801491
+Measuered Angle: 24,53992235018486
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 25
+Angels of First Image: 22,86977830798375, 0,8829662498672329
+Angels of Second Image: 30,000901077628264, 30,009269843737435
+Average Angle First: 11,876372278925492
+Error First Image: 21,986812058116517
+Average Angle Second: 30,00508546068285
+Error Second Image: -0,008368766109171588
+Measuered Angle: 18,128713181757355
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 30
+Angels of First Image: 0,7805429926574826, 18,458254035926277
+Angels of Second Image: 38,062667274368785, 35,00318654012511
+Average Angle First: 9,61939851429188
+Error First Image: -17,677711043268793
+Average Angle Second: 36,532926907246946
+Error Second Image: 3,059480734243678
+Measuered Angle: 26,913528392955065
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 35
+Angels of First Image: 0,8308481914240341, 14,539476962338957
+Angels of Second Image: 39,9918489985552, 40,26009837073163
+Average Angle First: 7,6851625768814955
+Error First Image: -13,708628770914924
+Average Angle Second: 40,12597368464341
+Error Second Image: -0,2682493721764345
+Measuered Angle: 32,44081110776192
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 40
+Angels of First Image: 44,94286934056886, 0,8510614556245883
+Angels of Second Image: 45,0, 45,0
+Average Angle First: 22,896965398096725
+Error First Image: 44,091807884944274
+Average Angle Second: 45,0
+Error Second Image: 0,0
+Measuered Angle: 22,103034601903275
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 45
+Angels of First Image: 0,8468589095957242, 56,591808282154155
+Angels of Second Image: 49,99312627883265, 50,00451991387823
+Average Angle First: 28,71933359587494
+Error First Image: -55,74494937255843
+Average Angle Second: 49,99882309635544
+Error Second Image: -0,011393635045578776
+Measuered Angle: 21,279489500480498
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 50
+Angels of First Image: 4,884985491072196, 21,602667495747497
+Angels of Second Image: 56,14430377606655, 54,99841813137082
+Average Angle First: 13,243826493409847
+Error First Image: -16,7176820046753
+Average Angle Second: 55,57136095371868
+Error Second Image: 1,1458856446957313
+Measuered Angle: 42,32753446030883
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 55
+Angels of First Image: 0,865468562617373, 0,8339013869119943
+Angels of Second Image: 58,043302048555994, 60,76721683238511
+Average Angle First: 0,8496849747646837
+Error First Image: 0,0315671757053787
+Average Angle Second: 59,40525944047055
+Error Second Image: -2,723914783829116
+Measuered Angle: 58,55557446570587
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 60
+Angels of First Image: 23,71970088414081, 15,891246792776961
+Angels of Second Image: 65,12635477786368, 65,97244777938603
+Average Angle First: 19,805473838458887
+Error First Image: 7,828454091363849
+Average Angle Second: 65,54940127862486
+Error Second Image: -0,8460930015223482
+Measuered Angle: 45,74392744016597
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 65
+Angels of First Image: 30,275480126284503, 0
+Angels of Second Image: 70,0018366203015, 70,16088571387237
+Average Angle First: 15,137740063142251
+Error First Image: 30,275480126284503
+Average Angle Second: 70,08136116708694
+Error Second Image: -0,1590490935708715
+Measuered Angle: 54,943621103944686
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 70
+Angels of First Image: 22,889054266365413, 0
+Angels of Second Image: 74,78179565752072, 75,1304370741598
+Average Angle First: 11,444527133182707
+Error First Image: 22,889054266365413
+Average Angle Second: 74,95611636584026
+Error Second Image: -0,348641416639083
+Measuered Angle: 63,511589232657556
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 75
+Angels of First Image: 0,7605187771308692, 28,576312548140614
+Angels of Second Image: 79,37999504295601, 80,2181278393022
+Average Angle First: 14,668415662635741
+Error First Image: -27,815793771009744
+Average Angle Second: 79,79906144112911
+Error Second Image: -0,8381327963461871
+Measuered Angle: 65,13064577849337
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 80
+Angels of First Image: 0, 3,8207704387916586
+Angels of Second Image: 85,08317068328819, 79,09426366751671
+Average Angle First: 1,9103852193958293
+Error First Image: -3,8207704387916586
+Average Angle Second: 82,08871717540245
+Error Second Image: 5,988907015771474
+Measuered Angle: 80,17833195600662
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 85
+Angels of First Image: 61,591299657127884, 3,2298456578473176
+Angels of Second Image: 1,8356783016493097, 0,9044776830404638
+Average Angle First: 32,4105726574876
+Error First Image: 58,36145399928056
+Average Angle Second: 1,3700779923448867
+Error Second Image: 0,9312006186088458
+Measuered Angle: -31,040494665142713
+
+Test 3
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 0
+Angels of First Image: 0,868461370428804, 0,8908892340208183
+Angels of Second Image: 0,8958508585244402, 0,8644995534979927
+Average Angle First: 0,8796753022248112
+Error First Image: -0,02242786359201432
+Average Angle Second: 0,8801752060112165
+Error Second Image: 0,03135130502644756
+Measuered Angle: 0,000499903786405298
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 5
+Angels of First Image: 0,8692430265899134, 0
+Angels of Second Image: 5,037858298980268, 5,097321293756467
+Average Angle First: 0,4346215132949567
+Error First Image: 0,8692430265899134
+Average Angle Second: 5,067589796368368
+Error Second Image: -0,059462994776199096
+Measuered Angle: 4,632968283073411
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 10
+Angels of First Image: 0,850736117424151, 0,9109433979047168
+Angels of Second Image: 10,11667114802506, 10,123546141355378
+Average Angle First: 0,8808397576644339
+Error First Image: -0,060207280480565784
+Average Angle Second: 10,12010864469022
+Error Second Image: -0,0068749933303173805
+Measuered Angle: 9,239268887025785
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 15
+Angels of First Image: 0,9368073953991569, 0,8288804775072123
+Angels of Second Image: 15,03421843342135, 14,997609414874217
+Average Angle First: 0,8828439364531846
+Error First Image: 0,10792691789194464
+Average Angle Second: 15,015913924147783
+Error Second Image: 0,036609018547132166
+Measuered Angle: 14,133069987694599
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 20
+Angels of First Image: 0,8351864635609104, 0,8196445635852001
+Angels of Second Image: 20,012436980925745, 20,025707918035067
+Average Angle First: 0,8274155135730552
+Error First Image: 0,015541899975710316
+Average Angle Second: 20,019072449480404
+Error Second Image: -0,013270937109322034
+Measuered Angle: 19,19165693590735
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 25
+Angels of First Image: 0, 0,9058638645322077
+Angels of Second Image: 25,000549673410845, 25,006409391937837
+Average Angle First: 0,45293193226610384
+Error First Image: -0,9058638645322077
+Average Angle Second: 25,00347953267434
+Error Second Image: -0,005859718526991742
+Measuered Angle: 24,550547600408237
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 30
+Angels of First Image: 0,8907013730300122, 0,8142113637975602
+Angels of Second Image: 30,056766181902855, 30,014493006317508
+Average Angle First: 0,8524563684137862
+Error First Image: 0,07649000923245197
+Average Angle Second: 30,035629594110183
+Error Second Image: 0,042273175585346934
+Measuered Angle: 29,183173225696397
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 35
+Angels of First Image: 0,8343455755467915, 0,8646936221597343
+Angels of Second Image: 35,00028783821217, 35,048800399693604
+Average Angle First: 0,8495195988532629
+Error First Image: -0,03034804661294288
+Average Angle Second: 35,02454411895289
+Error Second Image: -0,0485125614814379
+Measuered Angle: 34,175024520099626
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 40
+Angels of First Image: 0,8351314485886547, 22,98481053790671
+Angels of Second Image: 40,00684076410598, 39,9689568246632
+Average Angle First: 11,909970993247683
+Error First Image: -22,149679089318056
+Average Angle Second: 39,98789879438459
+Error Second Image: 0,03788393944277857
+Measuered Angle: 28,07792780113691
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 45
+Angels of First Image: 0, 0,8167220476440136
+Angels of Second Image: 45,0, 45,0
+Average Angle First: 0,4083610238220068
+Error First Image: -0,8167220476440136
+Average Angle Second: 45,0
+Error Second Image: 0,0
+Measuered Angle: 44,59163897617799
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 50
+Angels of First Image: 0,8553211225798142, 0
+Angels of Second Image: 49,98248005075446, 49,996374693330786
+Average Angle First: 0,4276605612899071
+Error First Image: 0,8553211225798142
+Average Angle Second: 49,98942737204263
+Error Second Image: -0,013894642576325111
+Measuered Angle: 49,56176681075272
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 55
+Angels of First Image: 0,8269557249909028, 0,8788411300938227
+Angels of Second Image: 55,075024468523814, 54,99144880207418
+Average Angle First: 0,8528984275423628
+Error First Image: -0,051885405102919946
+Average Angle Second: 55,033236635299
+Error Second Image: 0,08357566644963299
+Measuered Angle: 54,180338207756634
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 60
+Angels of First Image: 0,826400518617703, 0,8257059457055007
+Angels of Second Image: 60,02773456698979, 59,983151362943275
+Average Angle First: 0,8260532321616019
+Error First Image: 0,0006945729122023181
+Average Angle Second: 60,005442964966534
+Error Second Image: 0,04458320404651772
+Measuered Angle: 59,179389732804935
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 65
+Angels of First Image: 44,892711122726865, 0,9104540889438226
+Angels of Second Image: 64,96240931034433, 64,97451176456725
+Average Angle First: 22,901582605835344
+Error First Image: 43,98225703378304
+Average Angle Second: 64,9684605374558
+Error Second Image: -0,01210245422292644
+Measuered Angle: 42,06687793162045
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 70
+Angels of First Image: 0,8320807763893185, 0,8397684562556643
+Angels of Second Image: 69,96238448874225, 69,97542692895105
+Average Angle First: 0,8359246163224914
+Error First Image: -0,007687679866345776
+Average Angle Second: 69,96890570884665
+Error Second Image: -0,013042440208806738
+Measuered Angle: 69,13298109252416
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 75
+Angels of First Image: 0,8270115413853887, 0,8855737939219068
+Angels of Second Image: 74,99982394126015, 74,98573608888977
+Average Angle First: 0,8562926676536478
+Error First Image: -0,058562252536518145
+Average Angle Second: 74,99278001507496
+Error Second Image: 0,01408785237038046
+Measuered Angle: 74,13648734742131
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 80
+Angels of First Image: 0,8251444890239128, 0,8791624902661284
+Angels of Second Image: 79,97153540731534, 79,97876779625643
+Average Angle First: 0,8521534896450206
+Error First Image: -0,05401800124221556
+Average Angle Second: 79,97515160178588
+Error Second Image: -0,007232388941091017
+Measuered Angle: 79,12299811214086
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 85
+Angels of First Image: 0,7725780612693001, 0,7605187771308692
+Angels of Second Image: 84,95063339600786, 84,83427209947394
+Average Angle First: 0,7665484192000847
+Error First Image: 0,012059284138430826
+Average Angle Second: 84,89245274774089
+Error Second Image: 0,11636129653392402
+Measuered Angle: 84,1259043285408
+Press Enter to continue,,,
+
+
+Test 4
+
+Kalibrierung Winkel bei gleichem Bild
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 0
+Angels of First Image: -1,0492865694291378, -0,777559613597126
+Angels of Second Image: -0,9798990834075703, -0,9352187844905396
+Average Angle First: -0,9134230915131318
+Error First Image: -0,2717269558320118
+Average Angle Second: -0,9575589339490549
+Error Second Image: -0,044680298917030625
+Measuered Angle: -0,044135842435923056
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 5
+Angels of First Image: -0,6508864223330354, -1,0101341919090472
+Angels of Second Image: -0,9517503159149202, -0,9736252951786758
+Average Angle First: -0,8305103071210413
+Error First Image: 0,3592477695760118
+Average Angle Second: -0,962687805546798
+Error Second Image: 0,02187497926375559
+Measuered Angle: -0,13217749842575666
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 10
+Angels of First Image: -0,4190590889416907, -0,5233780900026973
+Angels of Second Image: 0,0496897819994615, -0,2504445747308462
+Average Angle First: -0,47121858947219397
+Error First Image: 0,10431900106100661
+Average Angle Second: -0,10037739636569235
+Error Second Image: 0,3001343567303077
+Measuered Angle: 0,37084119310650165
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 15
+Angels of First Image: -1,0480873044329442, -0,34514481653714313
+Angels of Second Image: -0,921342213894549, -0,7783917342716601
+Average Angle First: -0,6966160604850437
+Error First Image: -0,702942487895801
+Average Angle Second: -0,8498669740831045
+Error Second Image: -0,14295047962288887
+Measuered Angle: -0,15325091359806087
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 20
+Angels of First Image: -0,09908278760348443, -0,5555834974133366
+Angels of Second Image: -0,9497845514201221, -0,874973154636391
+Average Angle First: -0,3273331425084105
+Error First Image: 0,45650070980985213
+Average Angle Second: -0,9123788530282566
+Error Second Image: -0,07481139678373105
+Measuered Angle: -0,5850457105198461
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 25
+Angels of First Image: -0,05163247238443268, -0,8285148043899664
+Angels of Second Image: -0,6466336005876391, -0,7854418659857484
+Average Angle First: -0,44007363838719954
+Error First Image: 0,7768823320055337
+Average Angle Second: -0,7160377332866937
+Error Second Image: 0,1388082653981093
+Measuered Angle: -0,2759640948994942
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 30
+Angels of First Image: -0,9226353462972513, -1,1804034191532402
+Angels of Second Image: -1,0170651297803914, -0,5256379068060875
+Average Angle First: -1,0515193827252458
+Error First Image: 0,2577680728559889
+Average Angle Second: -0,7713515182932394
+Error Second Image: -0,49142722297430397
+Measuered Angle: 0,28016786443200636
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 35
+Angels of First Image: 0,07429853669990728, -1,3097353343296843
+Angels of Second Image: -1,1188905980924715, -0,646056909432433
+Average Angle First: -0,6177183988148884
+Error First Image: 1,3840338710295916
+Average Angle Second: -0,8824737537624523
+Error Second Image: -0,4728336886600385
+Measuered Angle: -0,26475535494756386
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 40
+Angels of First Image: -0,4893434577841027, -0,19530523440843148
+Angels of Second Image: -0,0752034316161847, -0,7090035574818849
+Average Angle First: -0,3423243460962671
+Error First Image: -0,2940382233756712
+Average Angle Second: -0,3921034945490348
+Error Second Image: 0,6338001258657002
+Measuered Angle: -0,04977914845276771
+
+
+
+Test 5
+
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 0
+Angels of First Image: -1,0613673229145908, -0,946988066443003
+Angels of Second Image: -1,1817379239814692, -0,8620003833815542
+Average Angle First: -1,004177694678797
+Error First Image: -0,11437925647158775
+Average Angle Second: -1,0218691536815117
+Error Second Image: -0,319737540599915
+Measuered Angle: -0,017691459002714627
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 5
+Angels of First Image: -0,29439548427992673, -0,46005394040550285
+Angels of Second Image: -0,689026018598404, -0,7387777423065245
+Average Angle First: -0,3772247123427148
+Error First Image: 0,16565845612557611
+Average Angle Second: -0,7139018804524642
+Error Second Image: 0,04975172370812053
+Measuered Angle: -0,33667716810974935
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 10
+Angels of First Image: -0,3825921132075159, -0,682395369141951
+Angels of Second Image: -0,5841578138014967, -0,8864887723599025
+Average Angle First: -0,5324937411747335
+Error First Image: 0,2998032559344351
+Average Angle Second: -0,7353232930806997
+Error Second Image: 0,30233095855840586
+Measuered Angle: -0,2028295519059662
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 15
+Angels of First Image: -0,9874059341753465, -0,43541521505253555
+Angels of Second Image: -0,9335064377216974, -0,5011538798803361
+Average Angle First: -0,711410574613941
+Error First Image: -0,551990719122811
+Average Angle Second: -0,7173301588010168
+Error Second Image: -0,4323525578413613
+Measuered Angle: -0,0059195841870758326
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 20
+Angels of First Image: -0,5201024103597948, -0,5729916223505606
+Angels of Second Image: -1,0041167539300773, 0,07756681123833735
+Average Angle First: -0,5465470163551777
+Error First Image: 0,052889211990765794
+Average Angle Second: -0,46327497134587
+Error Second Image: -1,0816835651684147
+Measuered Angle: 0,08327204500930768
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 25
+Angels of First Image: -0,10560891670526783, -1,165412771487588
+Angels of Second Image: -1,1408110681056258, -0,7812929652981395
+Average Angle First: -0,6355108440964279
+Error First Image: 1,05980385478232
+Average Angle Second: -0,9610520167018827
+Error Second Image: -0,3595181028074863
+Measuered Angle: -0,3255411726054548
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 30
+Angels of First Image: -0,14140274590809626, -0,8552870501068158
+Angels of Second Image: -0,5586703480459292, -1,052222366656432
+Average Angle First: -0,49834489800745607
+Error First Image: 0,7138843041987195
+Average Angle Second: -0,8054463573511806
+Error Second Image: 0,4935520186105029
+Measuered Angle: -0,30710145934372457
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 35
+Angels of First Image: -1,0381493004775308, -0,4938979620512427
+Angels of Second Image: -0,6031674928192123, -1,1449283436729993
+Average Angle First: -0,7660236312643868
+Error First Image: -0,5442513384262881
+Average Angle Second: -0,8740479182461058
+Error Second Image: 0,541760850853787
+Measuered Angle: -0,10802428698171906
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 40
+Angels of First Image: -0,026419502381604804, -0,6279398423347623
+Angels of Second Image: -0,7715185766921481, -1,0333566513166104
+Average Angle First: -0,32717967235818357
+Error First Image: 0,6015203399531575
+Average Angle Second: -0,9024376140043793
+Error Second Image: 0,2618380746244623
+Measuered Angle: -0,5752579416461957
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 45
+Angels of First Image: -1,3266412726958539, -0,7155121342322985
+Angels of Second Image: -0,9281796772096639, -1,0626160444440758
+Average Angle First: -1,0210767034640762
+Error First Image: -0,6111291384635553
+Average Angle Second: -0,9953978608268699
+Error Second Image: 0,13443636723441188
+Measuered Angle: 0,025678842637206323
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 50
+Angels of First Image: -0,500565286141198, -0,9312857188654413
+Angels of Second Image: -0,4860738817832342, -0,5387904699335857
+Average Angle First: -0,7159255025033197
+Error First Image: 0,4307204327242433
+Average Angle Second: -0,5124321758584099
+Error Second Image: 0,05271658815035152
+Measuered Angle: 0,2034933266449097
+
+Calibration Done,
+First Image Done,
+Second image done,
+Angle: 55
+Angels of First Image: -0,6852720144180874, -0,9524409679214103
+Angels of Second Image: -0,7281957173839668, -1,0511532543406514
+Average Angle First: -0,8188564911697489
+Error First Image: 0,2671689535033229
+Average Angle Second: -0,8896744858623091
+Error Second Image: 0,3229575369566846
+Measuered Angle: -0,07081799469256023
+
+Test 6
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 0
+Angels of First Image: -0,9997026528639879, -1,0450952001561575 
+Angels of Second Image: -0,7164705101603295, -0,8435260214320388
+Average Angle First: -1,0223989265100726
+Error First Image: 0,04539254729216968
+Average Angle Second: -0,7799982657961841
+Error Second Image: 0,12705551127170933
+Measuered Angle: 0,24240066071388844
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 5
+Angels of First Image: -1,1888669904221993, 0
+Angels of Second Image: 4,315352508374639, 4,34544373011514
+Average Angle First: -0,5944334952110997
+Error First Image: -1,1888669904221993
+Average Angle Second: 4,33039811924489
+Error Second Image: -0,03009122174050116
+Measuered Angle: 4,924831614455989
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 10
+Angels of First Image: -1,007189585267756, 0
+Angels of Second Image: 9,981504745802908, 9,394934842723751
+Average Angle First: -0,503594792633878
+Error First Image: -1,007189585267756
+Average Angle Second: 9,688219794263329
+Error Second Image: 0,5865699030791571
+Measuered Angle: 10,191814586897207
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 15
+Angels of First Image: -0,6280981099853546, -0,987034898338346
+Angels of Second Image: 14,330884053847091, 14,401168921050413
+Average Angle First: -0,8075665041618503
+Error First Image: 0,35893678835299136
+Average Angle Second: 14,366026487448753
+Error Second Image: -0,07028486720332161
+Measuered Angle: 15,173592991610603
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 20
+Angels of First Image: -0,9857825716860068, -0,9989071058550607
+Angels of Second Image: 19,399486529671254, 19,979504469266153
+Average Angle First: -0,9923448387705338
+Error First Image: 0,013124534169053903
+Average Angle Second: 19,689495499468705
+Error Second Image: -0,5800179395948994
+Measuered Angle: 20,68184033823924
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 25
+Angels of First Image: -0,8080385040938808, -0,9944936194107186
+Angels of Second Image: 24,291987738651198, 24,397442338884257
+Average Angle First: -0,9012660617522996
+Error First Image: 0,18645511531683778
+Average Angle Second: 24,344715038767728
+Error Second Image: -0,10545460023305964
+Measuered Angle: 25,245981100520027
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 30
+Angels of First Image: -0,9939768089080344, -0,9998998822026673
+Angels of Second Image: 29,390967606383168, 29,347974580027437
+Average Angle First: -0,9969383455553509
+Error First Image: 0,00592307329463293
+Average Angle Second: 29,369471093205302
+Error Second Image: 0,04299302635573099
+Measuered Angle: 30,366409438760652
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 35
+Angels of First Image: 0, -0,9900821089412314
+Angels of Second Image: 34,60660628015023, 34,92243372006441
+Average Angle First: -0,4950410544706157
+Error First Image: 0,9900821089412314
+Average Angle Second: 34,764520000107325
+Error Second Image: -0,3158274399141803
+Measuered Angle: 35,259561054577944
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 40
+Angels of First Image: 0, -0,9881702679344754
+Angels of Second Image: 39,87692556306449, 39,400421223895975
+Average Angle First: -0,4940851339672377
+Error First Image: 0,9881702679344754
+Average Angle Second: 39,63867339348023
+Error Second Image: 0,476504339168514
+Measuered Angle: 40,13275852744747
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 45
+Angels of First Image: -0,9736275158500156, -0,9831737071951727
+Angels of Second Image: 19,297892111475758, 31,45079313510707
+Average Angle First: -0,9784006115225942
+Error First Image: 0,009546191345157107
+Average Angle Second: 25,37434262329141
+Error Second Image: -12,152901023631312
+Measuered Angle: 26,352743234814007
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 50
+Angels of First Image: -0,8283439900468138, -0,990818971873446
+Angels of Second Image: -40,60672073459552, -39,97172986946756
+Average Angle First: -0,9095814809601299
+Error First Image: 0,16247498182663223
+Average Angle Second: -40,28922530203154
+Error Second Image: -0,6349908651279605
+Measuered Angle: -39,37964382107141
+
+
+
+
+
+
+move
+
+Calibration Test
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 0
+First: [760, 610], Second: [760, 664]
+Third: [760, 664], Fourth: [760, 669]
+Average first Point: [760,0, 637,0]
+Error first Point: [0, -54]
+Average second Point: [760,0, 666,5]
+Error second Point: [0, -5]
+Measuered distance: [0,0, -29,5]
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 5
+First: [759, 663], Second: [759, 663]
+Third: [759, 664], Fourth: [759, 664]
+Average first Point: [759,0, 663,0]
+Error first Point: [0, 0]
+Average second Point: [759,0, 664,0]
+Error second Point: [0, 0]
+Measuered distance: [0,0, -1,0]
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 10
+First: [760, 664], Second: [760, 664]
+Third: [759, 666], Fourth: [760, 664]
+Average first Point: [760,0, 664,0]
+Error first Point: [0, 0]
+Average second Point: [759,5, 665,0]
+Error second Point: [-1, 2]
+Measuered distance: [0,5, -1,0]
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 15
+First: [760, 609], Second: [759, 664]
+Third: [759, 664], Fourth: [759, 664]
+Average first Point: [759,5, 636,5]
+Error first Point: [1, -55]
+Average second Point: [759,0, 664,0]
+Error second Point: [0, 0]
+Measuered distance: [0,5, -27,5]
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 20
+First: [759, 664], Second: [759, 664]
+Third: [760, 648], Fourth: [760, 664]
+Average first Point: [759,0, 664,0]
+Error first Point: [0, 0]
+Average second Point: [760,0, 656,0]
+Error second Point: [0, -16]
+Measuered distance: [-1,0, 8,0]
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 25
+First: [760, 664], Second: [759, 663]
+Third: [761, 664], Fourth: [759, 664]
+Average first Point: [759,5, 663,5]
+Error first Point: [1, 1]
+Average second Point: [760,0, 664,0]
+Error second Point: [2, 0]
+Measuered distance: [-0,5, -0,5]
+Press Enter to continue,,,
+
+Calibration Done,
+First Image Done,
+Press Enter to continue,,,
+Second image done,
+Angle: 30
+First: [759, 664], Second: [761, 522]
+Third: [759, 676], Fourth: [760, 682]
+Average first Point: [760,0, 593,0]
+Error first Point: [-2, 142]
+Average second Point: [759,5, 679,0]
+Error second Point: [-1, -6]
+Measuered distance: [0,5, -86,0]
+Press Enter to continue,,,
+
+
+
+Test 1
+
+X_1
+First: [77, 705], Second: [78, 704]
+Third: [392, 713], Fourth: [392, 713]
+Fifth: [705, 726], Sixt: [705, 727]
+Seven: [1006, 748], Eight: [1005, 768]
+Nine: [1303, 767], Ten: [1303, 753]
+
+X_1,5
+First: [78, 705], Second: [79, 704]
+Third: [392, 713], Fourth: [392, 712]
+Fifth: [705, 727], Sixt: [705, 727]
+Seven: [1004, 780], Eight: [1004, 773]
+Nine: [1302, 794], Ten: [1304, 794]
+
+X_2
+First: [78, 704], Second: [78, 705]
+Third: [392, 712], Fourth: [391, 712]
+Fifth: [705, 726], Sixt: [704, 726]
+Seven: [1004, 763], Eight: [936, 762]
+Nine: [1304, 737], Ten: [1300, 793]
