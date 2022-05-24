@@ -1,0 +1,3 @@
+
+class MarkerError(Exception):
+    pass
