@@ -70,34 +70,11 @@ class Calibration(object):
             queue_size=20,
         )
 
-        planning_frame = move_group.get_planning_frame()
-        print("============ Planning frame: %s" % planning_frame)
-
-        # We can also print the name of the end-effector link for this group:
-        eef_link = move_group.get_end_effector_link()
-        print("============ End effector link: %s" % eef_link)
-
-        # We can get a list of all the groups in the robot:
-        group_names = robot.get_group_names()
-        print("============ Available Planning Groups:", robot.get_group_names())
-
-        # Sometimes for debugging it is useful to print the entire state of the
-        # robot:
-        print("============ Printing robot state")
-        print(robot.get_current_state())
-        print("")
-        ## END_SUB_TUTORIAL
-
         # Misc variables
-        self.box_name = ""
-        self.robot = robot
-        self.scene = scene
         self.move_group = move_group
         self.display_trajectory_publisher = display_trajectory_publisher
-        self.planning_frame = planning_frame
-        self.eef_link = eef_link
-        self.group_names = group_names
         self.sensorGetter = SensorGetter()
+        self.sphericalFit = SphericalFit()
 
         self.sensorAttachementLength = 0.16
         self.safetyOffset = 0.01
@@ -155,11 +132,11 @@ class Calibration(object):
 
         return quaternion_from_euler(euler[0], euler[1], euler[2])
 
-    def MoveToSphere(self, args, vector, safetyOffset, sensorAttachementLength, stepWidth): #vector = zu fahrende richtung
+    def MoveToSphere(self, coordsTuple, vector, safetyOffset, sensorAttachementLength, stepWidth): #vector = zu fahrende richtung
         offset = safetyOffset + sensorAttachementLength
-        currentX = float(args[1]) - offset * vector[0]
-        currentY = float(args[2]) - offset * vector[1]
-        currentZ = float(args[3]) - offset * vector[2]
+        currentX = float(coordsTuple[0]) - offset * vector[0]
+        currentY = float(coordsTuple[1]) - offset * vector[1]
+        currentZ = float(coordsTuple[2]) - offset * vector[2]
         startX = currentX - offset * vector[0]
         startY = currentY - offset * vector[1]
         startZ = currentZ - offset * vector[2]
@@ -195,24 +172,24 @@ class Calibration(object):
         else: return False
 
 
-    def HorizontalSphereApproach(self, args):
+    def HorizontalSphereApproach(self, coordsTuple):
         result = []
 
         #forward
         self.jointMover.go_to_joint_states([-180, -90, -140, -130, 270, 0], self.move_group)
-        result.append(self.MoveToSphere(args, [1, 0, 0], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
+        result.append(self.MoveToSphere(coordsTuple, [1, 0, 0], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
         self.jointMover.go_to_joint_states([-180, -90, -140, -130, 270, 0], self.move_group)
         #right
         self.jointMover.go_to_joint_states([-210, -130, -90, -140, 150, 0], self.move_group)
-        result.append(self.MoveToSphere(args, [0, 1, 0], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
+        result.append(self.MoveToSphere(coordsTuple, [0, 1, 0], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
         self.jointMover.go_to_joint_states([-210, -130, -90, -140, 150, 0], self.move_group)
         #top
         self.jointMover.go_to_joint_states([-180, -90, -90, -90, 90, 0], self.move_group)
-        result.append(self.MoveToSphere(args, [0, 0, -1], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
+        result.append(self.MoveToSphere(coordsTuple, [0, 0, -1], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
         self.jointMover.go_to_joint_states([-180, -90, -90, -90, 90, 0], self.move_group)
         #left
         self.jointMover.go_to_joint_states([-125, -130, -90, -140, 55, 0], self.move_group)
-        result.append(self.MoveToSphere(args, [0, -1, 0], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
+        result.append(self.MoveToSphere(coordsTuple, [0, -1, 0], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
         self.jointMover.go_to_joint_states([-125, -130, -90, -140, 55, 0], self.move_group)
 
         print("Pose1:\n")
@@ -226,7 +203,7 @@ class Calibration(object):
 
         return result
 
-    def DiagonalSphereApproach(self, args):
+    def DiagonalSphereApproach(self, coordsTuple):
         inverseSqrt2 = 1/sqrt(2)
 
         result = []
@@ -234,19 +211,19 @@ class Calibration(object):
 
         #top
         self.jointMover.go_to_joint_states(vals, self.move_group)
-        result.append(self.MoveToSphere(args, [0, 0, -1], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
+        result.append(self.MoveToSphere(coordsTuple, [0, 0, -1], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
         self.jointMover.go_to_joint_states(vals, self.move_group)
         #right
-        result.append(self.MoveToSphere(args, [0, inverseSqrt2, -inverseSqrt2], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
+        result.append(self.MoveToSphere(coordsTuple, [0, inverseSqrt2, -inverseSqrt2], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
         self.jointMover.go_to_joint_states(vals, self.move_group)
         #left
-        result.append(self.MoveToSphere(args, [0, -inverseSqrt2, -inverseSqrt2], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
+        result.append(self.MoveToSphere(coordsTuple, [0, -inverseSqrt2, -inverseSqrt2], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
         self.jointMover.go_to_joint_states(vals, self.move_group)
         #front
-        result.append(self.MoveToSphere(args, [inverseSqrt2, 0, -inverseSqrt2], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
+        result.append(self.MoveToSphere(coordsTuple, [inverseSqrt2, 0, -inverseSqrt2], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
         self.jointMover.go_to_joint_states(vals, self.move_group)
         #back
-        result.append(self.MoveToSphere(args, [-inverseSqrt2, 0, -inverseSqrt2], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
+        result.append(self.MoveToSphere(coordsTuple, [-inverseSqrt2, 0, -inverseSqrt2], self.safetyOffset, self.sensorAttachementLength, self.stepWidth))
         self.jointMover.go_to_joint_states(vals, self.move_group)
 
         return result
@@ -258,16 +235,83 @@ class Calibration(object):
             result.append(tupel)
         return result
 
+    def GetPoseSets(self, poses):
+        NOP
+        #TODO build sets of 8 different poses
+
+        #return array of set tuples  
+
+    def GetErrorParameters(self, measuredSphereCenters):
+        NOP
+        #TODO implement Error Parameter Identification via the extended jacobian matrix
+
+        #return array of error parameters
+
+    def IsEndGoalReached(self, errorParameters):
+        NOP
+        #TODO implement a check for the deviation of the calculated spheres of the mounting system
+        #and the actual sphere locations of the mounting system
+
+        #return true if goal is reached
+    
+    def UpdateKinematicModelOfRobot(self, errorParameters):
+        NOP
+        #TODO implement the update function of the error parameters of the kinematic Model inside the robot
+        #this might not be possible within python since you can't easily update the kinematic model within the robot controller itself
+        #a possible method is mentioned within our Studienarbeit but further studies are required
+
+    def DoSphereCalibration(self):
+        #this code follows the pseudo code example of Joubair and Bonev. The paper is cited in our Studienarbeit
+        orientations = 2
+        sphereCount = 5
+        poseCount = 13
+
+        poses = [sphereCount][orientations][poseCount]
+
+        for k in range(0, orientations):   
+            sphereCenters = self.calculateSphereMount.GetSphereCenters()
+            
+            for i in range(0, sphereCount):
+                coordsTuple = sphereCenters[i]
+                poses[i][k] = self.DiagonalSphereApproach(coordsTuple)
+
+        measuredSphereCenters = []
+
+        for i in range(0, sphereCount):
+
+            sets = self.GetPoseSets(poses[i])
+            measuredSphereCentersForOneSphere = []
+            for j in range(0, len(sets)):    
+                radius, x0, y0, z0 = self.sphericalFit.doSphereFit(self.ConvertPosesToPoints(sets[j]))
+                sphereParameters = (radius, x0, y0, z0)
+                measuredSphereCentersForOneSphere.append(sphereParameters)
+
+            measuredSphereCenters.append(measuredSphereCentersForOneSphere)
+    
+        result = self.GetErrorParameters(measuredSphereCenters)
+        isGoalReached = self.IsEndGoalReached(measuredSphereCenters)
+        return result, isGoalReached
+
         
 def main():
     try:
         args = sys.argv
+        maxLoops = 1
+
+        if (len(args) != 1):
+            maxLoops = args[1]
+
+
         calibration = Calibration()
-        sphericalFit = SphericalFit()
-        result = calibration.DiagonalSphereApproach(args)
-        radius, x0, y0, z0 = sphericalFit.doSphereFit(calibration.ConvertPosesToPoints(result))
-        print('Radius: ', radius, 'Center: (', str(x0), '|', str(y0), '|', str(z0), ')')
-        print(result)
+
+        for i in range(0, maxLoops):
+            result, isGoalReached = calibration.DoSphereCalibration()
+
+            if(isGoalReached == True):
+                break
+
+        calibration.UpdateKinematicModelOfRobot(result)
+
         
 
     except rospy.ROSInterruptException:
